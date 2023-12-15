@@ -876,7 +876,7 @@ bool AppInitParameterInteraction(const ArgsManager& args)
     }
 
     if (!fs::is_directory(args.GetBlocksDirPath())) {
-        return InitError(strprintf(_("Specified blocks directory \"%s\" does not exist."), args.GetArg("-blocksdir", "")));
+        return InitError(strprintf(_("Specified blocks directory \"%s\" does not exist"), args.GetArg("-blocksdir", "")));
     }
 
     // parse and validate enabled filter types
